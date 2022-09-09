@@ -5,7 +5,7 @@ class MyNavbar extends Component {
   render() {
     return (
       <Navbar className="bg-netflix " expand="lg">
-        <Container>
+        <Container fluid>
           <Image src="data/netflix_logo.png" height={100}></Image>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

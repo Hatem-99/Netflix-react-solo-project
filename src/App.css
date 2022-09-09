@@ -2,7 +2,7 @@
   text-align: center;
 }
 body{
-  background-color: black;
+  overflow-x: hidden;
 }
 
 .App-logo {
@@ -25,7 +25,16 @@ body{
 
 
 
-
+.movie-img{
+  object-fit: cover;
+}
+footer a, footer span {
+  color: #7f7f7f;
+}
+footer i {
+  color: #7c7c7c;
+  font-size: 20px;
+}
 
 .App-header {
   background-color: #282c34;
