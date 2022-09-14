@@ -1,8 +1,9 @@
-import { Component } from "react";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import { Col, Container, Row } from "react-bootstrap";
 
-class Header extends Component {
-  render() {
+const Header = () => {
+  
     return (
       <Container fluid className="bg-netflix pt-4">
         <Row>
@@ -54,7 +55,7 @@ class Header extends Component {
         </Row>
       </Container>
     );
-  }
+  
 }
 
 export default Header;

@@ -1,8 +1,10 @@
-import { Component } from "react";
-import { Container, Nav, Navbar, Image } from "react-bootstrap";
+/* eslint-disable jsx-a11y/anchor-is-valid */
 
-class MyNavbar extends Component {
-  render() {
+import { Container, Nav, Navbar, Image } from "react-bootstrap";
+import { Link } from "react-router-dom";
+
+const MyNavbar = () => {
+
     return (
       <Navbar className="bg-netflix " expand="lg">
         <Container fluid>
@@ -11,7 +13,7 @@ class MyNavbar extends Component {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link className="text-white" href="#home">Home</Nav.Link>
-              <Nav.Link className="text-white" href="#link">TV Shows</Nav.Link>
+              <Link className="nav-link text-white" to={'/tvshows'}>TV Shows</Link>
               <Nav.Link className="text-white" href="#link">Movies</Nav.Link>
               <Nav.Link className="text-white" href="#link">Recently Add</Nav.Link>
               <Nav.Link className="text-white" href="#link">My List</Nav.Link>
@@ -62,7 +64,7 @@ class MyNavbar extends Component {
         </Container>
       </Navbar>
     );
-  }
+  
 }
 
 export default MyNavbar;

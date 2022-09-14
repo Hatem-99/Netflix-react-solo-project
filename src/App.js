@@ -2,19 +2,23 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyNavbar from './components/MyNavbar'
 import Header from './components/Header'
-import MovieRow from './components/MovieRow';
 import Footer from './components/Footer';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import TvShows from './components/TvShows';
+import Details from './components/Details';
 
 function App() {
   return (
     <>
+    <BrowserRouter>
     <MyNavbar></MyNavbar>
     <Header></Header>
-    <MovieRow moviesName="harry%20potter" rowName="Trinding Now"></MovieRow>
-    <MovieRow moviesName="sherlock" rowName="Watch It Again"></MovieRow>
-    <MovieRow moviesName="action" rowName="New Releases"></MovieRow>
+    <Routes>
+    <Route path='/tvshows' element={<TvShows/>}/>
+    <Route path='/details/:movieId' element={<Details/>}/>
+    </Routes>
     <Footer></Footer>
+    </BrowserRouter>
     </>
    
   );
